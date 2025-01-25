@@ -1,0 +1,67 @@
+<div class="rent-house">
+    <div class="house-model-price-image" *ngIf="house">
+        <h1>{{ house.name }}</h1>
+        <p>${{ house.pricePerNight }} per night</p>
+        <img [src]="house.image" alt="{{ house.name }}" />
+    </div>
+    <div class="house-details">
+        <h2>House Specifications</h2>
+        <div class="house-specs">
+            <div>
+                <h3>Type</h3>
+                <p>{{ house?.type}}</p>
+            </div>
+            <div>
+                <h3>Bedrooms</h3>
+                <p>4</p>
+            </div>
+            <div>
+                <h3>Bathrooms</h3>
+                <p>2</p>
+            </div>
+            <div>
+                <h3>Square Footage</h3>
+                <p>45 sq ft</p>
+            </div>
+            <div>
+                <h3>Air Conditioner</h3>
+                <p>yes</p>
+            </div>
+            <div>
+                <h3>Parking</h3>
+                <p>yes</p>
+            </div>
+        </div>
+        <button (click)="onRentHouse()" [disabled]="!isAuthenticated">Rent this house</button>
+        <p *ngIf="!isAuthenticated" class="auth-warning">Please sign in to rent a house.</p>
+    </div>
+</div>
+<div class="house-equipment">
+    <h2>House Features</h2>
+    <div>
+        <div>
+            <img src="assets/icon/Frame 125.png" alt="">
+            <p>Wi-Fi</p>
+        </div>
+        <div>
+            <img src="assets/icon/Frame 125.png" alt="">
+            <p>Furnished</p>
+        </div>
+        <div>
+            <img src="assets/icon/Frame 125.png" alt="">
+            <p>Swimming Pool</p>
+        </div>
+        <div>
+            <img src="assets/icon/Frame 125.png" alt="">
+            <p>Garden</p>
+        </div>
+        <div>
+            <img src="assets/icon/Frame 125.png" alt="">
+            <p>Fireplace</p>
+        </div>
+        <div>
+            <img src="assets/icon/Frame 125.png" alt="">
+            <p>Smart Home Features</p>
+        </div>
+    </div>
+</div>

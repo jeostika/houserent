@@ -1,0 +1,20 @@
+<header>
+    <div class="logo" (click)="home()">
+      <img src="assets/logo/1.png" alt="">
+      <h1>House rental</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/cars">Houses</a>
+      <a href="">Details</a>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+    </nav>
+    <div class="profile">
+      <img src="assets/icon/profile.png" alt="">
+      <span *ngIf="isAuthenticated">{{ role }}: {{ username }}</span>
+      <button *ngIf="!isAuthenticated" (click)="user()">Sign In</button>
+      <button *ngIf="isAuthenticated" (click)="logout()">Sign Out</button>
+    </div>
+</header>
+  

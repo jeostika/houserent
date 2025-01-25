@@ -1,0 +1,48 @@
+<div class="user-container">
+    <h1>{{ isSignUp ? 'Sign Up' : 'Sign In' }}</h1>
+  
+    <!-- Sign-In Form -->
+    <form *ngIf="!isSignUp" [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+      <div class="error" *ngIf="signInForm.get('email')?.invalid && signInForm.get('email')?.touched">
+        Valid email is required.
+      </div>
+  
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Enter your password" />
+      <div class="error" *ngIf="signInForm.get('password')?.invalid && signInForm.get('password')?.touched">
+        Password must be at least 6 characters.
+      </div>
+  
+      <button type="submit" [disabled]="signInForm.invalid">Sign In</button>
+    </form>
+  
+    <!-- Sign-Up Form -->
+    <form *ngIf="isSignUp" [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+      <div class="error" *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched">
+        Valid email is required.
+      </div>
+  
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Enter your password" />
+      <div class="error" *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched">
+        Password must be at least 6 characters.
+      </div>
+  
+      <label for="confirmPassword">Confirm Password</label>
+      <input id="confirmPassword" type="password" formControlName="confirmPassword" placeholder="Confirm your password" />
+      <div class="error" *ngIf="signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched">
+        Confirm password is required.
+      </div>
+  
+      <button type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+    </form>
+  
+    <button class="toggle-btn" (click)="toggleForm()">
+      {{ isSignUp ? 'Already have an account? Sign In' : 'Don\'t have an account? Sign Up' }}
+    </button>
+  </div>
+  

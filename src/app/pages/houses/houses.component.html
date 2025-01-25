@@ -1,0 +1,27 @@
+<div class="filter">
+  <h1>Select a house type</h1>
+  <div class="categories">
+    <div 
+      [class.selected]="selectedCategory === ''" 
+      (click)="filterHouses('')">
+      <a href="javascript:void(0)">All houses</a>
+    </div>
+    <div 
+      *ngFor="let category of categories" 
+      [class.selected]="selectedCategory === category" 
+      (click)="filterHouses(category)">
+      <p>{{ category }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="house-list">
+  <div class="house-card" *ngFor="let house of filteredHouses">
+    <div class="house-image">
+      <img [src]="house.image" alt="{{ house.name }}" />
+    </div>
+    <h3>{{ house.name }}</h3>
+    <p class="price">${{ house.pricePerNight }} per night</p>
+    <button class="view-details" (click)="goToRentHouse(house.id)">View Details</button>
+  </div>
+</div>

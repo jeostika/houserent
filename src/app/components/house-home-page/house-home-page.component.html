@@ -1,0 +1,21 @@
+<div class="house-home-page">
+  <div class="header">
+    <h1>Choose the house that<br>suits you</h1>
+    <a href="/houses">View All &#x279C;</a>
+  </div>
+
+  <div class="house-list">
+    <div class="house-card" *ngFor="let house of houses; let i = index">
+      <div class="house-image">
+        <img [src]="house.image" alt="{{ house.name }}" />
+      </div>
+      <h3>{{ house.name }}</h3>
+      <p class="price">${{ house.pricePerNight }} per night</p>
+      <button class="view-details" (click)="goToRentHouse(i)">View Details</button>
+    </div>
+  </div>
+</div>
+<div class="banner">
+  <img src="assets/images/banner.jpg" alt="Banner">
+</div>
+

@@ -1,0 +1,133 @@
+.form-container {
+  background-color: #f5d06c;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px 25px;
+  width: 400px;
+  height: 450px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+select,
+input[type="date"] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Increased padding */
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f9f9f9;
+  appearance: none;
+}
+
+input[type="date"] {
+  max-width: 327px;
+}
+
+select:focus,
+input[type="date"]:focus {
+  border-color: #007BFF;
+}
+
+.hidden-label {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.submit-button {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold; /* Added bold font */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #e68a00;
+}
+
+.hero {
+  background-color: #d6a549;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 660px;
+  font-family: 'inter';
+  gap: 20%;
+  text-align: center; /* Ensures the text is centered */
+}
+
+.hero-text {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #FF9900;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    width: 150px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.availability,
+.comfort,
+.saving {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'inter';
+
+  h2 {
+    margin: 5px;
+    padding: 0;
+  }
+}
